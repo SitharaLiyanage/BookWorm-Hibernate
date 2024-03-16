@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1116.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.TransactionFormController">
+   <children>
+      <Label layoutX="44.0" layoutY="20.0" text="Transactions" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="1015.5" layoutX="102.0" layoutY="86.0" startX="-100.0" stroke="#0a3054" />
+      <Label layoutX="959.0" layoutY="7.0" prefHeight="32.0" prefWidth="48.0" text="Date:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="958.0" layoutY="47.0" prefHeight="32.0" prefWidth="48.0" text="Time:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1009.0" layoutY="7.0" prefHeight="32.0" prefWidth="104.0" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1008.0" layoutY="47.0" prefHeight="32.0" prefWidth="104.0" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="110.0" text="Transaction Id:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTranscationId" layoutX="214.0" layoutY="110.0" prefHeight="26.0" prefWidth="139.0" textFill="#159947">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="741.0" layoutY="110.0" text="Returned date:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="165.0" text="Member Id:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbMemberId" layoutX="205.0" layoutY="153.0" onAction="#cmbMemberOnAction" prefHeight="33.0" prefWidth="203.0" />
+      <Label layoutX="579.0" layoutY="167.0" text="Member Name:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemberName" layoutX="722.0" layoutY="166.0" textFill="#159947">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="228.0" text="Book ID:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbBookCode" layoutX="169.0" layoutY="223.0" onAction="#cmbBookOnAction" prefHeight="33.0" prefWidth="183.0" />
+      <Label layoutX="375.0" layoutY="230.0" text="Book Name:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookName" layoutX="474.0" layoutY="230.0" prefHeight="26.0" prefWidth="183.0" textFill="#159947">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="229.0" text="Qty. On Hand:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQtyOnHand" layoutX="797.0" layoutY="230.0" textFill="#159947">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrderCart" layoutX="100.0" layoutY="332.0" prefHeight="332.0" prefWidth="943.0">
+         <columns>
+            <TableColumn fx:id="colTranID" prefWidth="102.33334350585938" text="Transaction ID" />
+            <TableColumn fx:id="colMemID" prefWidth="101.66665649414062" text="Member ID" />
+            <TableColumn fx:id="colMemName" prefWidth="152.33334350585938" text="Member Name" />
+            <TableColumn fx:id="colBookID" prefWidth="94.3333740234375" text="Book ID" />
+            <TableColumn fx:id="colBookName" prefWidth="175.6666259765625" text="Book Name" />
+            <TableColumn fx:id="colBorrowedDate" prefWidth="155.0" text="Borrowed Date" />
+            <TableColumn fx:id="colReturnedDate" prefWidth="162.0" text="Returned Date" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="782.0" layoutY="278.0" onAction="#btnSaveOnAction" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #3498db;" text="Borrow" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblNetTotal" layoutX="806.0" layoutY="590.0" textFill="#b51313">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="110.0" text="Borrowed date:" textFill="#0a3054">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="borrowDate" layoutX="533.0" layoutY="110.0" />
+      <DatePicker fx:id="returnDate" layoutX="852.0" layoutY="110.0" />
+      <JFXButton layoutX="923.0" layoutY="278.0" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #3498db;" text="Return" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

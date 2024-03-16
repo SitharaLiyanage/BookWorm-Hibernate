@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="690.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterFormController">
+    <children>
+        <AnchorPane prefHeight="690.0" prefWidth="741.0" styleClass="background" stylesheets="@../styles/styles.css">
+            <children>
+                <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="85.0" layoutY="92.0">
+                    <image>
+                        <Image url="@../images/bookworm.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="683.0" prefHeight="690.0" prefWidth="683.0" style="-fx-background-color: white; -fx-background-radius: 50 0 0 50;">
+            <children>
+                <Label layoutX="113.0" layoutY="40.0" stylesheets="@../styles/styles.css" text="Register to Continue">
+                    <font>
+                        <Font name="Segoe UI Bold" size="50.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.003921568859368563" green="0.003921568859368563" blue="0.5411764979362488" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="0.8313725590705872" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <TextField fx:id="txtUserName" layoutX="182.0" layoutY="166.0" prefHeight="61.0" prefWidth="342.0" promptText="Enter your username" styleClass="text-field" stylesheets="@../styles/styles.css">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextField>
+                <JFXButton layoutX="281.0" layoutY="526.0" onAction="#btnSignUpOnAction" prefHeight="75.0" prefWidth="150.0" style="-fx-background-radius: 50;" stylesheets="@../styles/styles.css" text="Sign Up" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            <PasswordField fx:id="txtPassword" layoutX="183.0" layoutY="344.0" prefHeight="61.0" prefWidth="342.0" promptText="Enter your password" styleClass="text-field" stylesheets="@../styles/styles.css">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="txtPasswordRepeat" layoutX="182.0" layoutY="433.0" prefHeight="61.0" prefWidth="342.0" promptText="Retype your password" styleClass="text-field" stylesheets="@../styles/styles.css">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="txtEmail" layoutX="183.0" layoutY="256.0" prefHeight="61.0" prefWidth="342.0" promptText="Enter your email address" styleClass="text-field" stylesheets="@../styles/styles.css">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            </children>
+        </AnchorPane>
+        <Label layoutX="852.0" layoutY="640.0" text="Already have an Account ?">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <JFXButton ellipsisString="0" layoutX="1096.0" layoutY="633.0" onAction="#btnSignInFormOnAction" ripplerFill="#070707" text="Sign In" textFill="#00d4ff">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+    </children>
+</AnchorPane>

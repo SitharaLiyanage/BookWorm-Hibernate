@@ -1,0 +1,30 @@
+.background{
+    -fx-background-color: linear-gradient(to right,#01018a, #00d4ff);
+}
+
+.button{
+    -fx-background-color: linear-gradient(to top,#01018a, #00d4ff);
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(to bottom,#01018a, #00d4ff);
+    -fx-animated: fade in;
+}
+
+* {
+    -fx-primary-color: #00d4ff;
+    -fx-secondary-color: #4B6EAF;
+    -fx-grey-color: #01018a;
+
+    -fx-focus-color: -fx-secondary-color;
+}
+
+.text-field {
+    -fx-accent: -fx-primary-color;
+    -fx-background-color: -fx-grey-color, white;
+    -fx-background-insets: 0, 0 0 2 0;
+    -fx-background-radius: 0;
+}
+.text-field:focused {
+    -fx-background-color: -fx-primary-color, white;
+}
